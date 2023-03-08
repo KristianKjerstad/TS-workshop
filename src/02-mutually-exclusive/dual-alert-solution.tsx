@@ -11,13 +11,19 @@ Goal: Modify the Props type such that it has either a message or a messageId, bu
 
 type Variant = "primary" | "secondary" | "success" | "warning";
 
-type Props = {
-  message?: string;
-  messageId?: string;
-  variant?: Variant;
-};
+type Props =
+  | (
+      | {
+          message: string;
+          messageId?: never;
+        }
+      | {
+          message?: never;
+          messageId: string;
+        }
+    ) & { variant?: Variant };
 
-export const DualAlert: FC<Props> = ({
+export const DualAlertSolution: FC<Props> = ({
   message,
   messageId,
   variant = "primary",
@@ -26,5 +32,9 @@ export const DualAlert: FC<Props> = ({
 
   const actualMessage = message ?? formatMessage({ id: messageId });
 
-  return <div role="alert">{actualMessage}</div>;
+  return (
+    <div className={`alert alert-${variant}`} role="alert">
+      {actualMessage}
+    </div>
+  );
 };
