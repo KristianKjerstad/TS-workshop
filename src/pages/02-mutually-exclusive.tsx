@@ -1,5 +1,9 @@
 import { DualAlert } from "../02-mutually-exclusive/dual-alert";
 
+/*
+Props might be mutually exclusive (You must pass one of them but not both).
+*/
+
 export const MutuallyExclusive = () => {
   return (
     <div style={{ textAlign: "center" }}>
