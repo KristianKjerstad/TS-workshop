@@ -1,15 +1,43 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Navigation } from "./Navigation";
+import { PizzaShop } from "./03-pizza-shop/pizza-shop";
+import { IntlProvider } from "react-intl";
+import { messages } from "./messages";
+import { JsToTs } from "./pages/01-js-to-ts";
+import { MutuallyExclusive } from "./pages/02-mutually-exclusive";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Navigation />,
+  },
+  {
+    path: "/pizza-shop",
+    element: <PizzaShop />,
+  },
+  {
+    path: "/js-to-ts",
+    element: <JsToTs />,
+  },
+  {
+    path: "/mutually-exclusive",
+    element: <MutuallyExclusive />,
+  },
+]);
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <IntlProvider messages={messages} locale="en">
+      <RouterProvider router={router} />
+    </IntlProvider>
   </React.StrictMode>
 );
 

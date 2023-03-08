@@ -1,6 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { createBrowserRouter, Link } from "react-router-dom";
 
 function App() {
   return (
@@ -18,6 +19,11 @@ function App() {
         >
           Learn React
         </a>
+        <div>
+          <Link to="/">Home</Link>
+          <Link to="/nav">Navigation</Link>
+          <Link to="/pizza-shop">Pizza shop</Link>
+        </div>
       </header>
     </div>
   );
