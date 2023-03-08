@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { PizzaOnMenu } from "../01-js-to-ts/PizzaMenuItem";
 import { PizzaOnMenuSolution } from "../01-js-to-ts/PizzaMenuItemSolution";
-import { Pizza } from "../03-pizza-shop/types";
+import { Pizza } from "../04-pizza-shop/types";
 
 export const JsToTs = () => {
   const [orderTotal, setOrderTotal] = useState<number>(0);

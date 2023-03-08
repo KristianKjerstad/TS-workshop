@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { useIntl } from "react-intl";
-import { Pizza } from "../03-pizza-shop/types";
+import { Pizza } from "../04-pizza-shop/types";
 import { LabeledCheckbox } from "../components/labeled-checkbox";
 
 type PizzaOnMenuProps = {

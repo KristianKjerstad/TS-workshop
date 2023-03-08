@@ -1,4 +1,4 @@
-import { PizzaShop } from "../03-pizza-shop/pizza-shop";
+import { PizzaShop } from "../04-pizza-shop/pizza-shop";
 
 export const MoreStrict = () => {
   return (

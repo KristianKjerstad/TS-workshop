@@ -5,11 +5,12 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Navigation } from "./Navigation";
-import { PizzaShop } from "./03-pizza-shop/pizza-shop";
+import { PizzaShop } from "./04-pizza-shop/pizza-shop";
 import { IntlProvider } from "react-intl";
 import { messages } from "./messages";
 import { JsToTs } from "./pages/01-js-to-ts";
 import { MutuallyExclusive } from "./pages/02-mutually-exclusive";
+import { Generics } from "./pages/06-generic-prop-types";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/mutually-exclusive",
     element: <MutuallyExclusive />,
+  },
+  {
+    path: "/generics",
+    element: <Generics />,
   },
 ]);
 

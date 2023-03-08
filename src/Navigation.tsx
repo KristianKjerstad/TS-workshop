@@ -11,6 +11,7 @@ export const Navigation = () => {
         <Link to="/js-to-ts">01: Js to Ts</Link>
         <Link to="/mutually-exclusive">02: Mutually exclusive</Link>
         <Link to="/pizza-shop">03: Pizza shop</Link>
+        <Link to="/generics">06: Generics</Link>
       </div>
     </div>
   );
