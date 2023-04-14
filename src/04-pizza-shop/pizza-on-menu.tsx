@@ -15,6 +15,10 @@ export const PizzaOnMenu: FC<Props> = ({ pizza, onAddToOrder }) => {
   const [extras, setExtras] = useState<string[]>([]);
   const { formatList } = useIntl();
 
+  const logAddToOrder = (pizza: PizzaOnOrder, userName: string) => {
+    console.log(pizza)
+  }
+
   return (
     <div style={{ paddingTop: "92px" }}>
       <div>
@@ -45,7 +49,8 @@ export const PizzaOnMenu: FC<Props> = ({ pizza, onAddToOrder }) => {
                   setExtras((extras) => {
                     if (extras.includes(extra)) {
                       return extras.filter((x) => x !== extra);
-                    } else {
+                    }
+                    else {
                       return [...extras, extra];
                     }
                   });

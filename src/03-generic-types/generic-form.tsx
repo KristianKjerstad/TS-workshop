@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 import { LabeledInput } from "../components/labeled-input";
 
 type Props<TValues> = {

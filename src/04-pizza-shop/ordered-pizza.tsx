@@ -11,10 +11,10 @@ export const OrderedPizza: FC<Props> = ({ pizza }) => {
   const { formatNumber } = useIntl();
 
   return (
-    <div className="card mb-3">
-      <div className="card-body">
-        <h4 className="card-title d-flex justify-content-between">
-          <div className="text-capitalize">{pizza.name}</div>
+    <div>
+      <div>
+        <h4>
+          <div >{pizza.name}</div>
           <div>
             {formatNumber(pizza.price, {
               style: 'currency',
@@ -24,8 +24,8 @@ export const OrderedPizza: FC<Props> = ({ pizza }) => {
         </h4>
         <ol>
           {pizza.extraIngredients.map((extra, index) => (
-            <li key={index} className="d-flex justify-content-between">
-              <div className="text-capitalize">{extra.name}</div>
+            <li key={index} >
+              <div >{extra.name}</div>
               <div>
                 {formatNumber(extra.price, {
                   style: 'currency',

@@ -28,7 +28,7 @@ export const pizzas: Pizza[] = [
     extras: ['cheese', 'pepperoni', 'peppers'],
   },
   {
-    name: 'Pizza Ai funghi',
+    name: 'Pizza Al funghi',
     ingredients: ['tomato sauce', 'mozzarella', 'mushrooms', 'garlic'],
     image: '/img/funghi.png',
     price: 10.95,
@@ -53,7 +53,7 @@ export const extraIngredients: ExtraIngredients = {
 };
 
 export const getExtraIngredient = (name: string): ExtraIngredient => {
-  const extraIngredient = extraIngredients[name];
+  const extraIngredient = extraIngredients[name] ?? {name, price: 0} // todo comment out
 
   return extraIngredient;
 };

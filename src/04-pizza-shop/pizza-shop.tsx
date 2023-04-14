@@ -6,6 +6,27 @@ import { pizzas } from "./menu";
 import { OrderedPizza } from "./ordered-pizza";
 import { PizzaOnMenu } from "./pizza-on-menu";
 
+
+/*
+In the tsconfig.json, you can specify what TypeScript rules to enable.
+This can help you catch various types of errors!
+
+For example, try to add "Pizza Al funghi" with extra mushrooms to order.
+-- Step 1:
+Setting:
+  "noUncheckedIndexedAccess": true
+and restarting the app will catch the error!
+Turning on "noUncheckedIndexedAccess" will add undefined to any undeclared field in the type.
+
+-- Step 2:
+Set
+    "noUnusedParameters": true
+    "noUnusedLocals": true,
+
+NB! turning on more typescript checks in a codebase can cause a lot of compiler errors.
+*/
+
+
 export const PizzaShop: FC = () => {
   const { formatNumber } = useIntl();
   const [order, setOrder] = useState<PizzaOnOrder[]>([]);

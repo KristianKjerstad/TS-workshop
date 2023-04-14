@@ -11,6 +11,13 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
+
+    //task 4 step 1
+    "noUncheckedIndexedAccess": false,
+    // task 4 step 2
+    "noUnusedParameters": false,
+    "noUnusedLocals": false,
+
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
