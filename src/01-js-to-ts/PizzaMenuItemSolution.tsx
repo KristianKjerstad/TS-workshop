@@ -6,12 +6,23 @@ import { LabeledCheckbox } from "../components/labeled-checkbox";
 
 type PizzaOnMenuProps = {
   pizza: Pizza;
-  onAddToOrder: (cost: number) => void;
+  handleAddToOrder: (cost: number) => void;
 };
+
+
+/*
+Advantages with TS:
+- You know what the prop "Pizza" looks like and what attributes is has
+- Errors in the IDE if using the prop handleAddToOrder() in the wrong way
+- The IDE tells you the type of variables on hover.
+- Better autocompletion when typing. For example, compare writing "pizza.price" in above the <button> in this file vs PizzaMenuItem.js
+ */
+
+
 
 export const PizzaOnMenuSolution = ({
   pizza,
-  onAddToOrder,
+  handleAddToOrder,
 }: PizzaOnMenuProps) => {
   const [extras, setExtras] = useState<string[]>([]);
   const { formatList } = useIntl();
@@ -58,7 +69,7 @@ export const PizzaOnMenuSolution = ({
           </div>
         </div>
         <div style={{ paddingBottom: "16px" }}>Price: {pizza.price} </div>
-        <button onClick={() => onAddToOrder(pizza.price)}>Add to order</button>
+        <button onClick={() => handleAddToOrder(pizza.price)}>Add to order</button>
       </div>
     </div>
   );

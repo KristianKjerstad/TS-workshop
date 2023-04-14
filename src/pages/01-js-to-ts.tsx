@@ -20,10 +20,13 @@ export const JsToTs = () => {
 
       <PizzaOnMenu
         pizza={pizzaMargherita}
-        onAddToOrder={(cost: number) => {
+        handleAddToOrder={(cost: number) => {
           setOrderTotal(orderTotal + cost);
         }}
       />
+      {/*<PizzaOnMenuSolution pizza={pizzaMargherita} handleAddToOrder={(cost: number) => {*/}
+      {/*    setOrderTotal(orderTotal + cost);*/}
+      {/*  }}/>*/}
       <div style={{ paddingTop: "64px" }}>Order total: {orderTotal}</div>
     </div>
   );

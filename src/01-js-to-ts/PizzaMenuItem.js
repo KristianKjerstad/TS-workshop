@@ -5,12 +5,12 @@ import { LabeledCheckbox } from "../components/labeled-checkbox";
 
 /*
 TODO:
-- create a prop type for the PizzaOnMenu component
-- Add type for the extras state
+- Create a prop type for the PizzaOnMenu component: PizzaOnMenuProps
+- Add type for the "extras" state
 - Solve other errors found in your IDE
 */
 
-export const PizzaOnMenu = ({ pizza, onAddToOrder }) => {
+export const PizzaOnMenu = ({ pizza, handleAddToOrder }) => {
   const [extras, setExtras] = useState([]);
   const { formatList } = useIntl();
 
@@ -56,7 +56,7 @@ export const PizzaOnMenu = ({ pizza, onAddToOrder }) => {
           </div>
         </div>
         <div style={{ paddingBottom: "16px" }}>Price: {pizza.price} </div>
-        <button onClick={() => onAddToOrder()}>Add to order</button>
+        <button onClick={() => handleAddToOrder()}>Add to order</button>
       </div>
     </div>
   );
