@@ -9,12 +9,12 @@ type Props = {
 } & InputProps;
 
 export const LabeledInput: FC<Props> = ({ children, ...props }) => {
-  const internalId = useId();
+
 
   return (
-    <div className="mb-3">
-      <Label htmlFor={internalId}>{children}</Label>
-      <Input id={internalId} {...props} />
+    <div>
+      <Label>{children}</Label>
+      <Input {...props} />
     </div>
   );
 };

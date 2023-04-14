@@ -10,7 +10,7 @@ import { IntlProvider } from "react-intl";
 import { messages } from "./messages";
 import { JsToTs } from "./pages/01-js-to-ts";
 import { MutuallyExclusive } from "./pages/02-mutually-exclusive";
-import { Generics } from "./pages/06-generic-prop-types";
+import { Generics } from "./pages/03-generic-prop-types";
 
 const router = createBrowserRouter([
   {
