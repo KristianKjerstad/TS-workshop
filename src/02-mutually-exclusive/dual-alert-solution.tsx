@@ -12,16 +12,15 @@ Goal: Modify the Props type such that it has either a message or a messageId, bu
 type Variant = "primary" | "secondary" | "success" | "warning";
 
 type Props =
-  | (
-      | {
+      ({
           message: string;
-          messageId?: never;
+          messageId?: never; // never keyword indicates that the value will never occur
         }
       | {
           message?: never;
           messageId: string;
-        }
-    ) & { variant?: Variant };
+        })
+      & { variant?: Variant };
 
 export const DualAlertSolution: FC<Props> = ({
   message,

@@ -26,5 +26,7 @@ export const DualAlert: FC<Props> = ({
 
   const actualMessage = message ?? formatMessage({ id: messageId });
 
-  return <div role="alert">{actualMessage}</div>;
+  return <div className={`alert alert-${variant}`} role="alert">
+    {actualMessage}
+  </div>;
 };
