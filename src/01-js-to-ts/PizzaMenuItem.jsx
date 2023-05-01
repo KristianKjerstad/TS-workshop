@@ -10,7 +10,7 @@ TODO:
 - Solve other errors found in your IDE
 */
 
-export const PizzaOnMenu = ({ pizza, handleAddToOrder }) => {
+export const PizzaMenuItem = ({ pizza, handleAddToOrder }) => {
   const [extras, setExtras] = useState([]);
   const { formatList } = useIntl();
 

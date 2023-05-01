@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PizzaOnMenu } from "../01-js-to-ts/PizzaMenuItem";
+import { PizzaMenuItem } from "../01-js-to-ts/PizzaMenuItem";
 import { PizzaOnMenuSolution } from "../01-js-to-ts/PizzaMenuItemSolution";
 import { Pizza } from "../04-pizza-shop/types";
 
@@ -18,7 +18,7 @@ export const JsToTs = () => {
     <div style={{ textAlign: "center" }}>
       <h2>Converting JavaScript to TypeScript</h2>
 
-      <PizzaOnMenu
+      <PizzaMenuItem
         pizza={pizzaMargherita}
         handleAddToOrder={(cost: number) => {
           setOrderTotal(orderTotal + cost);
