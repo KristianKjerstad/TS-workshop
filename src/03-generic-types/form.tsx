@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 import { LabeledInput } from "../components/labeled-input";
 
 
@@ -13,7 +13,7 @@ type Props = {
   onSubmit: (values: any) => void;
 };
 
-export const ExampleForm: FC<Props> = ({ header, initialValues, onSubmit }) => {
+export const ExampleForm = ({ header, initialValues, onSubmit }: Props) => {
   const [values, setValues] = useState(initialValues);
 
   return (
@@ -26,7 +26,7 @@ export const ExampleForm: FC<Props> = ({ header, initialValues, onSubmit }) => {
           value={values[key]}
           onChange={(e) => setValues({ ...values, [key]: e.target.value })}
         >
-          <span>{key}:   </span>
+          <span>{key}:</span>
         </LabeledInput>
       ))}
       <button type="submit">Submit</button>

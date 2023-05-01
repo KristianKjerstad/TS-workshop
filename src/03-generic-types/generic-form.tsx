@@ -8,7 +8,7 @@ type Props<TValues> = {
 };
 
 
-// Record<Keys, Type> is an object type whose keys is of type 'Keys' and values are of type 'Type'.
+// Record<Key, Type> is an object type whose keys is of type 'Key' and values are of type 'Type'.
 
 export const GenericForm = <TValues extends Record<string, any>>({
   header,
