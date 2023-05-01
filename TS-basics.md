@@ -32,7 +32,7 @@ const calculateVAT = (cost: number): number => {
 
 
 
-- How does it work? TypeScript checks types before converting the code to JavaScript. (Your browser don't understand TypeScript, but can execute TypeScript written apps because he code is converted to JavaScript at build time)
+- How does it work? TypeScript checks types before converting the code to JavaScript. (Your browser don't understand TypeScript, but can execute TypeScript written apps because the code is converted to JavaScript at build time)
 - Because of this, errors are checked at compile time (not at run time)
 
 
@@ -80,39 +80,54 @@ export type Ingredient = {
   name: string
   price: number
   allergies?: string[] // string[] or undefined
-  vendor?: string // string or undefined
+  vendor?: Vendor // string or undefined
 }
+
+export type Vendor = {
+  name: string
+  address: "string"
+}
+
+
+
 
 
 
 // Chaining operator
 const ingredient: Ingredient = {
   name: "cheese", 
-  price: "0.9", 
+  price: 0.9, 
   allergies: ["milk"]
 }
 
-ingredient.vendor? // undefined but gives no error
-  
-  
-  
-// More generic types
-type FormData = {[key: string]: number | string}
-
-TODO generics
-
-  
-// Nullish Coalescing operator 
-const foo = null ?? 'default string';
-const foo2 = null || 'default string';
-console.log(foo);   // output: "default string"
-console.log(foo2);  //output: "default string"
+ingredient?.vendor?.address // returns undefined
+ingredient.vendor.address   // gives error: "Cannot read properties of undefined (reading 'address')". (This error is catched in TS but not with JS!)
 
 
-const baz = 0 ?? 42;
-const baz2 = 0 || 42;
-console.log(baz);  // output: 0
-console.log(baz2); // output: 42
+
+
+
+
+// Nullish Coalescing operator vs OR operator in JS
+console.log( null ?? 'default string');   // output: "default string"
+console.log (null || 'default string' );  //output: "default string"
+
+console.log( 0 ?? 42);  // output: 0
+console.log( 0 || 42 ); // output: 42
+
+
+
+
+
+
+//  Generic types
+See generics-example.tsx
+
+
+
+
+  
+
 
 
 
