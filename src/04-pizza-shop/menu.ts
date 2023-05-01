@@ -53,7 +53,7 @@ export const extraIngredients: ExtraIngredients = {
 };
 
 export const getExtraIngredient = (name: string): ExtraIngredient => {
-  const extraIngredient = extraIngredients[name] ?? {name, price: 0} // todo comment out
+  const extraIngredient = extraIngredients[name] // ?? {name, price: 0}
 
   return extraIngredient;
 };

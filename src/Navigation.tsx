@@ -11,7 +11,7 @@ export const Navigation = () => {
         <Link to="/js-to-ts">01: Js to Ts</Link>
         <Link to="/mutually-exclusive">02: Mutually exclusive</Link>
         <Link to="/generics">03: Generics</Link>
-        <Link to="/pizza-shop">04: Pizza shop</Link>
+        <Link to="/pizza-shop">04: Pizza shop - more strict TS features</Link>
 
       </div>
     </div>
