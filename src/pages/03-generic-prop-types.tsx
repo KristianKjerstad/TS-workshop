@@ -7,8 +7,15 @@ export const Generics = () => {
       <h2>Generic React prop types</h2>
 
 
-      <ExampleForm header={"User"} initialValues={{firstName: "John", lastName: "Doe"}} onSubmit={() => {alert("Sumbitted!")}} />
-      <ExampleForm header={"User"} initialValues={{firstName: "John", lastName: "Doe", email: "test@live.com", "phone": 123123123}} onSubmit={() => {alert("Sumbitted!")}} />
+      {/*TODO check that the type of submittedValue is correct*/}
+      <ExampleForm header={"User"}
+                   initialValues={{firstName: "John", lastName: "Doe"}}
+                   onSubmit={(submittedValue) => {alert(`Sumbitted! ${JSON.stringify(submittedValue)}`)}}
+      />
+      <ExampleForm header={"User"}
+                   initialValues={{firstName: "John", lastName: "Doe", email: "test@live.com", "phone": 123123123}}
+                   onSubmit={(submittedValue) => {alert(`Sumbitted! ${JSON.stringify(submittedValue)}`)}}
+      />
 
 
       {/*<GenericForm*/}
