@@ -15,7 +15,7 @@ export const PizzaOnMenu: FC<Props> = ({ pizza, onAddToOrder }) => {
   const [extras, setExtras] = useState<string[]>([]);
   const { formatList } = useIntl();
 
-  const logAddToOrder = (pizza: PizzaOnOrder, userName: string) => {
+  const logAddToOrder = (pizza: Pizza, userName: string) => {
     console.log(pizza)
   }
 
