@@ -85,7 +85,7 @@ export type Ingredient = {
 
 export type Vendor = {
   name: string
-  address: "string"
+  address: string
 }
 
 
@@ -105,15 +105,15 @@ ingredient.vendor.address   // gives error: "Cannot read properties of undefined
 
 
 
+// Syntax for arrays
+const x: (number | string)[] = ["hello", "world", 42, 99, 123]
+const y: [string, string, number] = ["hello", "world", 42]
 
 
+// QUIZ! What is the inferred type of firstNumber?
+const numbers: number[] = []
+let firstNumber = numbers[0]
 
-// Nullish Coalescing operator vs OR operator in JS
-console.log( null ?? 'default string');   // output: "default string"
-console.log (null || 'default string' );  //output: "default string"
-
-console.log( 0 ?? 42);  // output: 0
-console.log( 0 || 42 ); // output: 42
 
 
 

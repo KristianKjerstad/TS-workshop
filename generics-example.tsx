@@ -22,7 +22,7 @@ export function useDocument<TDocument>(id: string): {document: TDocument | undef
 
 
   useEffect(() => {
-    axios.get( `https.myCoolAPI.com/documents/${id}`)
+    axios.get( `https://myCoolAPI.com/documents/${id}`)
       .then((response: AxiosResponse<TDocument>) => {
         const data = response.data
         setDocument(data)
